@@ -550,9 +550,9 @@ const recharge = async (req, res) => {
     let utr = req.body.utr;
 
     if (type != 'cancel' && type != 'submit' && type != 'submitauto') {
-        if (!auth || !money || money <= 299) {
+        if (!auth || !money || money < 200 || money > 100000) {
             return res.status(200).json({
-                message: 'Minimum recharge 300',
+                message: 'Minimum recharge 200rs and Maximum recharge 100000rs',
                 status: false,
                 timeStamp: timeNow,
             })
@@ -852,9 +852,9 @@ const withdrawal3 = async (req, res) => {
     let auth = req.cookies.auth;
     let money = req.body.money;
     let password = req.body.password;
-    if (!auth || !money || !password || money <=119) {
+    if (!auth || !money || !password || money <=119 || money > 50000) {
         return res.status(200).json({
-            message: 'Minimum Withdraw 110',
+            message: 'Minimum Withdraw 119 and Maximum Withdraw 50000',
             status: false,
             timeStamp: timeNow,
         })

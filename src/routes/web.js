@@ -149,8 +149,8 @@ const initWebRouter = (app) => {
     router.get('/admin/manager/index/5', adminController.middlewareAdminController, adminController.adminPage5); // get info account
     router.get('/admin/manager/index/10', adminController.middlewareAdminController, adminController.adminPage10); // get info account
 
-    router.get('/admin/manager/5d', adminController.middlewareAdminController, adminController.adminPage5d); // get info account
-    router.get('/admin/manager/k3', adminController.middlewareAdminController, adminController.adminPageK3); // get info account
+    // router.get('/admin/manager/5d', adminController.middlewareAdminController, adminController.adminPage5d); // get info account
+    // router.get('/admin/manager/k3', adminController.middlewareAdminController, adminController.adminPageK3); // get info account
 
 
     router.get('/admin/manager/members', adminController.middlewareAdminController, adminController.membersPage); // get info account
