@@ -7958,7 +7958,7 @@
             $(this).addClass('block-click');
             let money = $('#ramount').val().trim();
             let type = $('.pay-box:eq(0) .list').find('.action').attr('type');
-            if (money && money >= 20 && money <= 20000) { 
+            if (money && money >= 200 && money <= 100000) { 
                 $.ajax({
                     type: "POST",
                     url: "/api/webapi/recharge",
@@ -7988,7 +7988,7 @@
                 });
                 return true;
             }
-            alertMess('Deposit amount range : 300~20000', $(this));
+            alertMess('Deposit amount range : 200~100000', $(this));
         });
         // $('.submit').click(function (e) {
         //     e.preventDefault();
